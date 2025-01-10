@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ahmed Al Breem's Profile</title>
-  <link rel="icon" href="protofile.jpg" type="image/jpeg">
   <link rel="stylesheet" href="style.css">
   <style>
     body {
@@ -25,6 +24,10 @@
       width: 150px;
       height: auto;
       border-radius: 50%;
+      transition: transform 0.3s; /* Add transition for hover effect */
+    }
+    .profile-img:hover {
+      transform: scale(1.05); /* Scale effect on hover */
     }
     .icon {
       width: 20px;
@@ -46,10 +49,11 @@
   </style>
 </head>
 <body>
-  <header style="display: flex; align-items: center; justify-content: center; text-align: center;">
+  <header style="display: flex; align-items: center;">
     <img src="protofile.jpg" alt="Profile Photo" class="profile-img">
     <div style="margin-left: 20px;">
       <h1>Ahmed Al Breem</h1>
+      <p style="font-style: italic;">Aspiring C/C++ and Android Engineer</p>
       <p><img src="phone.png" alt="Phone" class="icon" style="width: 30px; height: 30px;"> Phone Numbers: (+880) 1728542127 (Work), (+880) 1986474598 (Home)</p>
       <p><img src="email.png" alt="Email" class="icon" style="width: 30px; height: 30px;"> Email Addresses: <a href="mailto:amealbrem@gmail.com">amealbrem@gmail.com</a>, <a href="mailto:albreemvoice@gmail.com">albreemvoice@gmail.com</a></p>
       <p><img src="social-icon.png" alt="Social" class="icon" style="width: 30px; height: 30px;"> Social Links: 
@@ -68,11 +72,11 @@
     <h3>Other Language(s):</h3>
     <p>English:</p>
     <ul>
-      <li>Listening: B2</li>
-      <li>Reading: B2</li>
-      <li>Spoken Production: B2</li>
-      <li>Spoken Interaction: B2</li>
-      <li>Writing: B2</li>
+      <p>Listening: B2</p>
+      <p>Reading: B2</p>
+      <p>Spoken Production: B2</p>
+      <p>Spoken Interaction: B2</p>
+      <p>Writing: B2</p>
     </ul>
   </section>
 
@@ -88,11 +92,11 @@
     <h2>Digital Skills</h2>
     <h3>Digital Skills - Test Results</h3>
     <ul>
-      <li>Information and data literacy: INTERMEDIATE Level 4/6</li>
-      <li>Communication and collaboration: INTERMEDIATE Level 3/6</li>
-      <li>Digital content creation: ADVANCED Level 5/6</li>
-      <li>Safety: INTERMEDIATE Level 3/6</li>
-      <li>Problem solving: INTERMEDIATE Level 4/6</li>
+      <p>Information and data literacy: INTERMEDIATE Level 4/6</p>
+      <p>Communication and collaboration: INTERMEDIATE Level 3/6</p>
+      <p>Digital content creation: ADVANCED Level 5/6</p>
+      <p>Safety: INTERMEDIATE Level 3/6</p>
+      <p>Problem solving: INTERMEDIATE Level 4/6</p>
     </ul>
     <h3>My Digital Skills:</h3>
     <p>My skills include CSS, Microsoft Excel, MongoDB, MySQL, Bootstrap, Linux, Java, PHP, HTML, JavaScript, Google Ads, C++, C, AI prompt engineering, and more.</p>
@@ -141,7 +145,7 @@
   </section>
 
   <footer>
-    <p style="color:  #e74c3c;">&copy; 2023 Ahmed Al Breem</p>
+    <p style="color: white;">&copy; 2023 Ahmed Al Breem</p>
   </footer>
 </body>
 </html>
