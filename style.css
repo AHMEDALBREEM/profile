@@ -1,7 +1,8 @@
 body {
   font-family: 'Roboto', sans-serif; /* Use for body */
   line-height: 1.7;
-  margin: 20px;
+  margin: 50px;
+  margin-bottom: 10px;
   background: #ecf0f1; /* Clouds */
   color: #2c3e50; /* Midnight Blue */
   animation: gradient-animation 3s ease-in-out;
