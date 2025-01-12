@@ -99,3 +99,10 @@ window.addEventListener('scroll', () => {
     worknum = 0; // Reset the counter after closing fullscreen
   }
 });
+
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
