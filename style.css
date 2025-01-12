@@ -162,7 +162,10 @@ section:hover {
   header {
     flex-direction: column;
     text-align: center;
+    margin-left: 5%;
   }
+
+  
 
   nav.navy ul {
     flex-direction: column;
@@ -175,6 +178,7 @@ section:hover {
   .certificates-grid {
     grid-template-columns: 1fr;
   }
+
 }
 
 
@@ -315,34 +319,87 @@ footer {
   }
   h1 {
     font-size: 2em;
-  }
-  .profile-img {
+    }
+    .profile-img {
     width: 100px;
-  }
-  .certificate-img {
+    }
+    .certificate-img {
     max-width: 100%;
     height: auto;
-  }
-  .header{
+    }
+    .header {
     margin: 10px;
+    }
   }
-}
 
-@media (max-width: 600px) {
-  nav ul {
+  @media (max-width: 600px) {
+    nav ul {
     flex-direction: column;
     align-items: center;
     display: none;
-  }
-  nav ul li {
+    }
+    nav ul li {
     margin: 5px 0;
-  }
-  nav ul li a {
+    }
+    nav ul li a {
     padding: 10px 15px;
     border-bottom: 2px solid transparent;
     transition: border-color 0.3s ease;
-  }
-  nav ul li a:hover {
+    }
+    nav ul li a:hover {
     border-color: #e74c3c;
+    }
   }
-}
+
+  /* Mobile-specific styles */
+  @media screen and (max-width: 768px) {
+    .diva{
+      margin-left: 0px;
+    }
+    .skills-list {
+      grid-template-columns: 1fr;
+    }
+    .certificates-grid {
+      grid-template-columns: 1fr;
+    }
+    body {
+      margin: 10px;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    .profile-img {
+      width: 100px;
+    }
+    .certificate-img {
+      max-width: 100%;
+      height: auto;
+    }
+    .header {
+      margin: 10px;
+    }
+  }
+
+  /* Additional styles for very small screens */
+  @media screen and (max-width: 480px) {
+    body {
+      margin: 5px;
+      margin-left: 0px;
+    }
+    h1 {
+      font-size: 1.5em;
+    }
+    .profile-img {
+      width: 80px;
+    }
+    .certificate-img {
+      max-width: 100%;
+      height: auto;
+    }
+    .header {
+      margin: 0px;
+    }
+    .diva{
+      margin-left: 0px;
+    }
+  }
