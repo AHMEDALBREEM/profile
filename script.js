@@ -91,7 +91,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
-
+let worknum = 0;
 window.addEventListener('scroll', () => {
-  closeFullscreen();
+  worknum++;
+  if (worknum === 3) {
+    closeFullscreen();
+    worknum = 0; // Reset the counter after closing fullscreen
+  }
 });
