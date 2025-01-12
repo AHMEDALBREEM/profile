@@ -503,3 +503,57 @@ footer:hover {
       margin-left: 0px;
     }
   }
+
+  @media screen and (max-width: 460px) {
+      .project-card {
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+    
+      .project-card h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+    
+      .project-card h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #555;
+      }
+    
+      .project-card hr {
+        border: none;
+        border-top: 2px solid #5bc0de;
+        margin: 15px 0;
+      }
+    
+      .project-card p {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 15px;
+      }
+    
+        .project-card p:last-child {
+        margin-bottom: 0;
+      }
+    
+      .project-card p > span {
+        font-weight: bold;
+      }
+
+      p {
+        word-wrap: break-word; /* Break long words to prevent overflow */
+        overflow-wrap: break-word; /* Ensure compatibility with different browsers */
+        max-width: 100%; /* Ensure the paragraph does not exceed its container */
+      }
+      
+      .project-card {
+        min-width: 200px; /* Set a minimum width */
+        max-width: 400px; /* Set a maximum width */
+      }
+      
+    }
