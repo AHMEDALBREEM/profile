@@ -1,8 +1,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.7;
-  margin: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 05px;
   background: #ecf0f1;
   color: #2c3e50;
   animation: gradient-animation 3s ease-in-out;
@@ -15,7 +14,7 @@ a {
 }
 
 a:hover {
-  color: #e74c3c;
+  color: #af5d54;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -49,7 +48,7 @@ a:hover {
 }
 
 .nav-link:hover {
-  color: #e74c3c;
+  color: #af5d54;
 }
 
 .nav-link:hover::before,
@@ -81,10 +80,13 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
 }
 
 section {
-  margin-bottom: 40px;
+  margin: 40px;
   background-color: #ffffff;
   padding: 30px;
   opacity: 0.7;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
@@ -110,7 +112,7 @@ section:hover {
 
 .profile-img:hover {
   opacity: 1;
-  border-color: #e74c3c;
+  border-color: #3498db;
   transform: scale(1.05);
 }
 
@@ -126,7 +128,6 @@ section:hover {
 .icon:hover {
   opacity: 1;
 }
-
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -141,6 +142,9 @@ section:hover {
   background-color: #ffffff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden; /* Ensure content does not overflow the card */
+  max-width: 100%; /* Ensure card does not exceed its container */
+  word-wrap: break-word; /* Break long words to prevent overflow */
 }
 
 .project-card:hover {
@@ -157,7 +161,7 @@ section:hover {
 }
 
 .project-card h3:hover {
-  color: #e74c3c;
+  color: #af5d54;
 }
 
 .project-card ul {
@@ -173,7 +177,7 @@ section:hover {
 }
 
 .project-card p:hover {
-  color: #e74c3c;
+  color: #af5d54;
 }
 
 .skills-list {
