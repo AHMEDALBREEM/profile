@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
   document.body.appendChild(scrollToTopBtn);
 
   window.addEventListener("scroll", function() {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 400) {
       scrollToTopBtn.classList.add("show");
     } else {
       scrollToTopBtn.classList.remove("show");
