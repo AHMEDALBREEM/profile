@@ -9,7 +9,7 @@ function toggleContactInfo() {
 
 let timeoutId; // لتعريف المؤقت
 let currentIndex = 0; // المؤشر الحالي للصورة
-const maxIndex = 26; // الحد الأقصى للمؤشر
+const maxIndex = 27; // الحد الأقصى للمؤشر
 
 function showImage(index) {
   const images = document.querySelectorAll('.certificate-img');
