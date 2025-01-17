@@ -289,14 +289,27 @@ section:hover {
 
 @media only screen and (min-width: 1024px) {
   .certificate-img.fullscreen {
+    /* Positioning */
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: contain;
-    z-index: 1000;
-    background: rgba(0, 0, 0, 0.9);
+    right: 0;
+    bottom: 0;
+  
+    /* Sizing */
+    width: 100%;
+    height: 100%;
+  
+    /* Image styling */
+    object-fit: contain;  /* Ensures the image fits within the screen while maintaining aspect ratio */
+    
+    /* Layering */
+    z-index: 1000;  /* Makes sure the image is on top of other content */
+    
+    /* Background */
+    background-color: rgba(0, 0, 0, 0.9);  /* Darkens the background behind the image */
+    
+    /* Animation */
     animation: fadeIn 0.5s ease forwards;
   }
 }
