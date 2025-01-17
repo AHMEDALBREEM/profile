@@ -5,7 +5,7 @@ function toggleContactInfo() {
 
 let timeoutId;
 let currentIndex = 0;
-const maxIndex = 30;
+const maxIndex = 31;
 
 function showImage(index) {
     const images = document.querySelectorAll('.certificate-img');
