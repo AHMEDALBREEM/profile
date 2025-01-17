@@ -287,16 +287,18 @@ section:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-.certificate-img.fullscreen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: contain;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.9);
-  animation: fadeIn 0.5s ease forwards;
+@media only screen and (min-width: 1024px) {
+  .certificate-img.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.5s ease forwards;
+  }
 }
 
 @keyframes fadeIn {
