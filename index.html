@@ -95,7 +95,11 @@
     </ul>
       </section>
 
-  <section id="PROJECTS">
+  <section id="PROJECTS" style="    display: flex; /* Or display: grid */
+    flex-direction: row; /* Or grid-template-columns */
+    flex-wrap: wrap; /* Crucial for items to wrap onto the next line if needed*/
+    width: fit-content; /* Ensures the container will dynamically adapt its width to fit its content*/
+}"">
     <h2>Projects</h2>
     <div class="projects-grid">
       <div>
