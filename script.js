@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
 let worknum = 0;
 window.addEventListener('scroll', () => {
     worknum++;
-    if (worknum === 3) {
+    if (worknum === 6) {
         closeFullscreen();
         worknum = 0;
     }
