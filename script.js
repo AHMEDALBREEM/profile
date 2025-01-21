@@ -1,11 +1,12 @@
 function toggleContactInfo() {
     const contactInfo = document.getElementById('contactInfo');
-    contactInfo.classList.toggle('visible'); // Use classList.toggle for better readability
+    contactInfo.classList.toggle('visible');
 }
 
 let timeoutId;
 let currentIndex = 0;
 const maxIndex = 38;
+
 
 function showImage(index) {
     const images = document.querySelectorAll('.certificate-img');
@@ -15,13 +16,7 @@ function showImage(index) {
         return;
     }
 
-    if (index < 0) {
-        currentIndex = images.length - 1;
-    } else if (index >= images.length) {
-        currentIndex = 0;
-    } else {
-        currentIndex = index;
-    }
+    currentIndex = (index + images.length) % images.length;
 
     images.forEach(img => img.classList.remove('fullscreen'));
     clearTimeout(timeoutId);
@@ -29,9 +24,7 @@ function showImage(index) {
     const currentImage = images[currentIndex];
     currentImage.classList.add('fullscreen');
 
-    timeoutId = setTimeout(() => {
-        closeFullscreen();
-    }, 5000);
+    timeoutId = setTimeout(closeFullscreen,30000);
 }
 
 function closeFullscreen() {
@@ -40,7 +33,7 @@ function closeFullscreen() {
     clearTimeout(timeoutId);
 }
 
-document.addEventListener('keydown', (event) => {
+document.addEventListener('keydown', event => {
     if (event.key === 'ArrowRight') {
         showImage(currentIndex + 1);
     } else if (event.key === 'ArrowLeft') {
@@ -52,18 +45,17 @@ document.addEventListener('keydown', (event) => {
 
 document.querySelectorAll('.certificate-img').forEach((img, index) => {
     img.addEventListener('click', () => {
-        currentIndex = index;
-        showImage(currentIndex);
+        showImage(index);
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
     const scrollToTopBtn = document.createElement("button");
     scrollToTopBtn.id = "scrollToTopBtn";
     scrollToTopBtn.innerHTML = "↑";
     document.body.appendChild(scrollToTopBtn);
 
-    window.addEventListener("scroll", function() {
+    window.addEventListener("scroll", () => {
         if (window.scrollY > 400) {
             scrollToTopBtn.classList.add("show");
         } else {
@@ -71,18 +63,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    scrollToTopBtn.addEventListener("click", function() {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+    scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
     });
 });
 
-let worknum = 0;
+let worknum = -1;
+
 window.addEventListener('scroll', () => {
     worknum++;
-    if (worknum === 5) {
+    if (worknum === 10) {
         closeFullscreen();
         worknum = 0;
     }
