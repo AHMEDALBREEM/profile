@@ -5,7 +5,7 @@ function toggleContactInfo() {
 
 let timeoutId;
 let currentIndex = 0;
-const maxIndex = 39;
+const maxIndex = 40;
 
 
 function showImage(index) {
