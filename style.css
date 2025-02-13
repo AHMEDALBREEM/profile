@@ -78,22 +78,23 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   border-bottom-color: #e74c3c;
 }
-
-section {
-  margin: 40px;
-  background-color: #FFFFFF; /* Soft white */
-  padding: 30px;
-  opacity: 0.7;
-  margin-top: 50px;
-  margin-left: 50px;
-  margin-bottom: 50px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+.sections-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 20px; /* Space between sections */
+  width: 100%; /* Full width of the container */
 }
 
+section {
+    background-color: #FFFFFF; /* Soft white */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    width: 100%; /* Occupy the full width of the grid cell */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
 section:hover {
-  opacity: 1;
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   border-top: 2px solid #E3D0C8; /* Muted pastel orange */
@@ -238,6 +239,9 @@ section:hover {
     grid-template-columns: 1fr;
   }
 }
+
+
+
 
 .digital-skills-container {
   display: grid;
@@ -450,9 +454,13 @@ footer:hover {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+    .sections-container {
+        grid-template-columns: 1fr;
+    }
   .certificates-grid {
     grid-template-columns: 1fr;
   }
+
 }
 
 @media (max-width: 600px) {
@@ -477,6 +485,9 @@ footer:hover {
   }
 
   .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .sections-container {
     grid-template-columns: 1fr;
   }
   .certificates-grid {
@@ -510,6 +521,9 @@ footer:hover {
   }
 
   .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .sections-container {
     grid-template-columns: 1fr;
   }
   .certificates-grid {
