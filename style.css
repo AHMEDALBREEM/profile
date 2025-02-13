@@ -3,6 +3,7 @@ body {
   line-height: 1.7;
   margin-bottom: 5px;
   padding: 5px;
+  padding-bottom: 15px;
   background: #F6E7D8; /* Light beige or pastel orange */
   color: #333333; /* Dark charcoal */
   animation: gradient-animation 3s ease-in-out;
