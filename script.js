@@ -7,24 +7,9 @@ let timeoutId;
 let currentIndex = 0;
 const maxIndex = 50;
 
-
-function showImage(index) {
-    const images = document.querySelectorAll('.certificate-img');
-
-    if (index >= maxIndex) {
-        closeFullscreen();
-        return;
-    }
-
-    currentIndex = (index + images.length) % images.length;
-
-    images.forEach(img => img.classList.remove('fullscreen'));
-    clearTimeout(timeoutId);
-
-    const currentImage = images[currentIndex];
-    currentImage.classList.add('fullscreen');
-
-    timeoutId = setTimeout(closeFullscreen,30000);
+function showImage(url) {
+    // Open the file in a new tab
+    window.open(url, '_blank');  
 }
 
 function closeFullscreen() {
@@ -45,7 +30,7 @@ document.addEventListener('keydown', event => {
 
 document.querySelectorAll('.certificate-img').forEach((img, index) => {
     img.addEventListener('click', () => {
-        showImage(index);
+        showImage(img.src);
     });
 });
 
